@@ -111,7 +111,7 @@
 # def get_prompt(role):
 #     return f'''
 # you are {role}
-# '''
+# ''
 
 # print(get_prompt('xiaohongshu'))
 

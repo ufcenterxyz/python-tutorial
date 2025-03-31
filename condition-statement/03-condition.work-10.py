@@ -1,4 +1,4 @@
-name=input("admin:")
+name=input("username:")
 password=input("password:")
 
 if name=="admin" and password=="password":

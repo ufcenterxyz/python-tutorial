@@ -1,9 +1,24 @@
 new_list=[]
 new_tuple=()
 new_string=""
-new=None
+nothing=None
 
-if new_list or new_tuple or new_string or new:
-    print("变量为空")
+if len(new_list) == 0:
+    print("为空")
 else:
-    print("变量不为空")
+    print("不为空")
+
+if len(new_tuple)==0:
+    print("为空")
+else:
+    print("不为空")
+
+if len(new_string)==0:
+    print("为空")
+else:
+    print("不为空")
+    
+if nothing is None:
+    print("为空")
+else:
+    print("不为空")

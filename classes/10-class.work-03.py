@@ -1,13 +1,20 @@
 # 方法重载
 class Calculator(object):
+
     def __init__(self):
         pass
-    def add(self,num1,num2):
         
-        return num1+num2
+    def add(self,*args):
+        print(args)
+        if len(args)==2:
+            return args[0]+args[1]
+        elif len(args)==1:
+            return sum(args[0])
+        else:
+            return "valueError"
+        
     
-    def add(self,num_list):
-        return 1
+
 
 result=Calculator()
 print(result.add(1,2))

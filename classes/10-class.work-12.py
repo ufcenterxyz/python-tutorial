@@ -8,15 +8,20 @@ class Engine(object):
         def end(self):
             return f"{self.name} can end ."   
         
-class Car(Engine):
+class Car():
+    engine=None
     
+    def __init__(self, engin):
+        self.engine = engin
+        
     def start_car(self):
         return  self.start()
     
     def end_car(self):
         return self.end()
     
-result_car=Car("TSL").end_car()
+# esg = Engine("esg")
+result_car=Car(Engine("esg"))
 
 print(result_car)
 

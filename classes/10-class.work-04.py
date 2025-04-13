@@ -2,7 +2,9 @@
 class Animal(object):
     def __init__(self,name):
         self.name=name
-        
+    
+    def speak(self):
+        return f"{self.name} can speak"
     
     
 class Dog(Animal):

@@ -1,0 +1,13 @@
+➜  python-tutorial git:(main) ✗ poetry add aiofiles
+Creating virtualenv async-9iYLXKI0-py3.12 in /home/mavis/.cache/pypoetry/virtualenvs
+Using version ^24.1.0 for aiofiles
+
+Updating dependencies
+Resolving dependencies... (2.1s)
+
+Package operations: 1 install, 0 updates, 0 removals
+
+  - Installing aiofiles (24.1.0)
+
+Writing lock file
+➜  python-tutorial git:(main) ✗ 

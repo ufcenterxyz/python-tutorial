@@ -1,0 +1,18 @@
+[project]
+name = "async"
+version = "1.13"
+description = ""
+authors = [
+    {name = "mavisli002",email = "lifunnypets@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "aiofiles (>=24.1.0,<25.0.0)",
+    "aiohttp (>=3.11.16,<4.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -11,17 +11,28 @@ async def fun_generate(queue):
     await queue.put(None)
 
 
-async def fun_handle_sqrt(queue):
+async def fun_handle_sqrt(inter_queue,outer_queue):
     while True:
-        n=await queue.get()
+        n=await inter_queue.get()
         if n is None:
+            await outer_queue.put(None)
             break
         item=n*n
-        print(item)
+        await outer_queue.put(item)
+        
+        
+async def saver(outer_queue):
+    while True:
+        o=await outer_queue.get()
+        if o is None:
+            break
+        print(o)
+    
 
 
 async def main():
     queue=asyncio.Queue()
-    await asyncio.gather(fun_generate(queue),fun_handle_sqrt(queue))
+    outer_queue=asyncio.Queue()
+    await asyncio.gather(fun_generate(queue),fun_handle_sqrt(queue,outer_queue),saver(outer_queue))
 
 asyncio.run(main())
